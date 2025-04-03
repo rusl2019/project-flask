@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+<div class="welcome">
+    {% if current_user.is_authenticated %}
+        <h2>Selamat datang, {{ current_user.username }}!</h2>
+        <p>Anda telah berhasil login.</p>
+    {% else %}
+        <h2>Selamat datang di Website Autentikasi Flask</h2>
+        <p>Silakan <a href="{{ url_for('login') }}">login</a> atau <a href="{{ url_for('register') }}">register</a> untuk mengakses fitur lengkap.</p>
+    {% endif %}
+</div>
+{% endblock %}
