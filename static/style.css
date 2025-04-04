@@ -21,7 +21,7 @@ main {
 }
 footer {
     padding: 1rem 0;
-    background-color: #343a40;
+    background-color: rgba(33,37,41,1);
     color: white;
     text-align: center;
 }
